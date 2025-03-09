@@ -2,7 +2,7 @@
   "name": "imagecompressor",
   "version": "1.0.0",
   "description": "will work for image compressor",
-  "main": "nodemon index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
