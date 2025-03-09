@@ -4,7 +4,7 @@ const app  = express();
 require('dotenv').config();
 const compressorRoute = require('./Routes/api.js');
 const webRouter = require('./Routes/web.js');
-
+app.use(express.static(path.join(__dirname, 'frontend')));
 app.use('/', compressorRoute);
 app.use('/', webRouter);
 app.use(express.static('frontend'));
