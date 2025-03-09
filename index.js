@@ -14,6 +14,10 @@ app.use(cors());
 
 const httpServer = server.createServer(app);
 
+app.get('/health', (req, res) => {
+    res.send('Server is running...');
+});
+
 httpServer.listen(process.env.PORT, () => {
     console.log(`Server started on port ${process.env.PORT}`);
 });
