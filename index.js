@@ -9,8 +9,8 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 app.use('/', compressorRoute);
 app.use('/', webRouter);
 app.use(express.static('frontend'));
-app.use(path.join(__dirname, 'images'));
-app.use(path.join(__dirname, 'compressed'));
+app.use(express.static(path.join(__dirname, 'images')));
+app.use(express.static(path.join(__dirname, 'compressed')));
 app.use(cors());
 
 // const httpServer = server.createServer(app);
