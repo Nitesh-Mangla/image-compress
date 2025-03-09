@@ -19,7 +19,7 @@ compressBtn.addEventListener('click', async () => {
     originalImage.style.display = 'block';
 console.log("Sss");
     // Send image to backend for compression
-    const response = await fetch(`${window.location.hostname}/compress`, {
+    const response = await fetch(`/compress`, {
         method: 'POST',
         body: formData,
     });
