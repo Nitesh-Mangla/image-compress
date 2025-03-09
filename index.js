@@ -7,7 +7,7 @@ const webRouter = require('./Routes/web.js');
 
 app.use('/', compressorRoute);
 app.use('/', webRouter);
-app.use(express.static('Frontend'));
+app.use(express.static('frontend'));
 app.use(cors());
 
 // const httpServer = server.createServer(app);
