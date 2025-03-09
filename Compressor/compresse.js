@@ -18,6 +18,25 @@ exports.upload = multer({
     limits: { fileSize: 1024 * 1024 * 1024 },
 });
 
+// exports.compressor = async (req, res) => {
+//     try {
+//         const inputFile = req.file.path;
+//         const outputFile = path.join(
+//             __dirname,
+//             process.env.COMPRESS_FILE_UPLOAD_PATH,
+//             req.file.originalname
+//         );
+//
+//         const fileExtension = path.extname(req.file.originalname).toLowerCase().replace('.', '');
+//         await sharp(inputFile).toFormat(fileExtension, {
+//             quality: Number(process.env.COMPRESS_QUALITY_PERCENTAGE),
+//         }).toFile(outputFile);
+//         res.download(outputFile);
+//     } catch(e){
+//         console.log(e.message);
+//     }
+// }
+
 exports.compressor = async (req, res) => {
     try {
         const fileBuffer = req.file.buffer;
